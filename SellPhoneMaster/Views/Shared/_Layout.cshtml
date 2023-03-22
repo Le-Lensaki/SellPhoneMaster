@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="~/Content/fonts/font-slider.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/Menu.css" type="text/css">
+    <!-- jQuery and Modernizr-->
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--Top-->
+    <nav id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <select class="language">
+                        <option value="English" selected>English</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                    </select>
+                    <select class="currency">
+                        <option value="USD" selected>USD</option>
+                        <option value="EUR">VNĐ</option>                  
+                    </select>
+                </div>
+                <div class="col-6">
+                    <ul class="top-link">
+                        <li><span class="fas fa-user">@Html.ActionLink("Login", "Login", "Home")</span></li>
+                        <li><span class="fas f-envelope">@Html.ActionLink("Contact", "Contact", "Home")</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header-->
+    <header class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div id="logo"><img src="~/Content/images/logo.png" /></div>
+            </div>
+            <div class="col-md-4">
+                <form class="form-search">
+                    <input type="text" class="input-medium search-query">
+                    <button type="submit" class="btn"><span class="fas fa-search"></span></button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div id="cart">@Html.ActionLink("Cart:0", "Cart", "Home", null,new { @class = "btn btn-1 fas fa-shopping-cart" })</div>
+            </div>
+        </div>
+    </header>
+
+    <!--Navigation-->
+    <nav id="menu" class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <span id="heading" class="visible-xs mobile">Categories</span>
+                <button type="button" class="btn btn-navbar navbar-toggle mobile" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="navbar-collapse navbar-expand-sm navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">PC Computers</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    <li><a @Html.ActionLink("Window", "Index", "Category")</a></li>
+                                    <li><a @Html.ActionLink("Window", "Index", "Category")</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptops &amp; Notebooks</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    <li> @Html.ActionLink("Dell", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Asus", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("SamSung", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Lenovo", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Acer", "Index", "Category")</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mobiles &amp; Tablet</a>
+                        <div class="dropdown-menu" style="margin-left: -203.625px;">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    <li> @Html.ActionLink("Iphone", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Samsung", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Nokia", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Lenovo", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Google", "Index", "Category")</li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li> @Html.ActionLink("Nexus", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Dell", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Oppo", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Blackberry", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("HTC", "Index", "Category")</li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li> @Html.ActionLink("LG", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Q-Mobiles", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Sony", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("Wiko", "Index", "Category")</li>
+                                    <li> @Html.ActionLink("T&T", "Index", "Category")</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>@Html.ActionLink("Software", "Index", "Category")</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="wrap-footer">
+                <div class="row">
+                    <div class="col-md-3 col-footer footer-1">
+                        <img src="~/Content/images/logofooter.png" />
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-md-3 col-footer footer-2">
+                        <div class="heading"><h4>Customer Service</h4></div>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Delivery Information</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-footer footer-3">
+                        <div class="heading"><h4>My Account</h4></div>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Brands</a></li>
+                            <li><a href="#">Gift Vouchers</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-footer footer-4">
+                        <div class="heading"><h4>Contact Us</h4></div>
+                        <ul>
+                            <li><span class="glyphicon glyphicon-home"></span>California, United States 3000009</li>
+                            <li><span class="glyphicon glyphicon-earphone"></span>+91 8866888111</li>
+                            <li><span class="glyphicon glyphicon-envelope"></span>infor@yoursite.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        Your Store ?? 20xx - Designed by <a href="https://www.Zerotheme.com">Zerotheme</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pull-right">
+                            <ul>
+                                <li><img src="~/Content/images/visa-curved-32px.png" /></li>
+                                <li><img src="~/Content/images/paypal-curved-32px.png" /></li>
+                                <li><img src="~/Content/images/discover-curved-32px.png" /></li>
+                                <li><img src="~/Content/images/maestro-curved-32px.png" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
